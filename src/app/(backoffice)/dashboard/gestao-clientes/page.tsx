@@ -1,11 +1,10 @@
+import Heading from '@/components/backoffice/Heading'
 import React from 'react'
 
 export default function page() {
   return (
     <div>
-      <h2>
-        Pagina de  clientes
-      </h2>
+     <Heading title='Gestão de Clientes'/>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import LogoHome from "@/img/logoHome.png";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,7 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SupplySync",
   description: "gestor de Compras",
-  icons: "/logo.png"
+  icons: {
+    icon: "/logoHome.ico",
+  },
 };
 
 export default function RootLayout({

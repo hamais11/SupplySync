@@ -13,11 +13,11 @@ export default function Layout({ children }: any) {
       {/*  sidebar */}
 
       <Sidebar />
-      <div className="  ml-0 flex-grow bg-slate-100 min-h-screen">
+      <div className="ml- flex-grow bg-slate-100 min-h-screen">
         {/*  Header */}
-        <Navbar />
+        <Navbar  />
 
-        <main className="p-20 bg-slate-100 dark:bg-slate-900 text-slate-50 min-h-screen mt-16">
+        <main className="p-10 bg-slate-100 dark:bg-slate-900 text-slate-50 min-h-screen">
           {children}
         </main>
       </div> 

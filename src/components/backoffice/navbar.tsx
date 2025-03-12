@@ -1,8 +1,9 @@
 import React from "react";
+import TeamSwitcherBtn from "./TeamSwitcher";
 
 export default function Navbar() {
   return (
-    <header className="antialiased">
+    <header className="antialiased ml-2">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center">
           <div className="flex justify-start items-center">
@@ -320,7 +321,7 @@ export default function Navbar() {
               </a>
             </div>
 
-           
+           <TeamSwitcherBtn/>
             <button
               type="button"
               className="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"

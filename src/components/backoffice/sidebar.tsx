@@ -8,13 +8,13 @@ import { LayoutDashboard } from "lucide-react";
 export default function Sidebar() {
   return (
     <div className="xl:w-72 w-80 xl:p-4 p-2 bg-white flex-col justify-start items-start gap-5 inline-flex">
-      <div className="w-full pt-4 justify-between items-center gap-2.5 inline-flex px-2">
+      <div className="w-full pt-0 justify-between items-center gap-2.5 inline-flex px-2 top-0">
         <a href="javascript:;">
           <Image
             src={LogoHome}
             alt="Pagedone logo image"
-            height={150}
-            width={150}
+            height={50}
+            width={100}
           />
         </a>
         <a href="javascript:;" className="w-6 h-6 relative bg-white">
