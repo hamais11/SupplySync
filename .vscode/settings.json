@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/78644bb9-6c1b-4fb6-b4b5-2f419e76147c/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/SupplySync",
+    "appService.deploySubpath": "."
+}
