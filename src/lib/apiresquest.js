@@ -10,7 +10,7 @@ export async function makePostRequest(
 ) {
   try {
     setLoading(true);
-    const baseUrl = "http://localhost:3000";
+    const baseUrl = "https://supply-sync-seven.vercel.app";
     //fetch('http://localhost:3000/api/categories')
     const response = await fetch(`${baseUrl}/${endpoint}`, {
       method: "POST",
