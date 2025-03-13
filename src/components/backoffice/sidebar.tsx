@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 export default function Sidebar() {
   const pathName = usePathname();
   return (
-    <div className="xl:w-72 w-80 xl:p-4 p-2 bg-white dark:text-slate-300 dark:bg-gray-800 flex-col justify-start items-start gap-5 inline-flex fixed left-0 top-0 ">
+    <div className="xl:w-72 w-80 xl:p-4 p-2 bg-white dark:text-slate-300 dark:bg-gray-800 flex-col justify-start items-start gap-5 inline-flex fixed left-0 top-0 h-full">
       <div className="w-full pt-0 justify-between items-center gap-2.5 inline-flex px-2 top-0 ">
         <a href="javascript:;">
           <Image
