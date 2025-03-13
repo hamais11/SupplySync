@@ -1,44 +1,29 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import LogoHome from "@/img/logoHome.png";
 import { menu, settings } from "@/utils/data";
 import Link from "next/link";
 import { LayoutDashboard } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
+  const pathName = usePathname();
   return (
-    <div className="xl:w-72 w-80 xl:p-4 p-2 bg-white flex-col justify-start items-start gap-5 inline-flex">
-      <div className="w-full pt-0 justify-between items-center gap-2.5 inline-flex px-2 top-0">
+    <div className="xl:w-72 w-80 xl:p-4 p-2 bg-white dark:text-slate-300 dark:bg-gray-800 flex-col justify-start items-start gap-5 inline-flex fixed left-0 top-0 ">
+      <div className="w-full pt-0 justify-between items-center gap-2.5 inline-flex px-2 top-0 ">
         <a href="javascript:;">
           <Image
+          
             src={LogoHome}
             alt="Pagedone logo image"
-            height={50}
+            height={100}
             width={100}
           />
         </a>
-        <a href="javascript:;" className="w-6 h-6 relative bg-white">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="Menu">
-              <rect width="24" height="24" fill="white" />
-              <path
-                id="icon"
-                d="M13 6H21M3 12H21M7 18H21"
-                stroke="#1F2937"
-                stroke-width="1.6"
-                stroke-linecap="round"
-              />
-            </g>
-          </svg>
-        </a>
+       
       </div>
-      <div className="w-full p-3 rounded-lg border border-gray-300">
+      <div className="w-full p-3 rounded-lg border border-gray-300 ">
         <div className="w-full items-center flex">
           <div className="w-full justify-between items-center inline-flex">
             <div className="items-center flex">
@@ -48,10 +33,10 @@ export default function Sidebar() {
                 src="https://dwv7infdfa.ufs.sh/f/4MlElOKgtT9fzY4wnk9VZ5RYXDePySNC1dv6FBzuAMqaf9GU"
               />
               <div className="flex-col inline-flex ml-2.5">
-                <h2 className="text-gray-700 text-sm font-semibold leading-snug">
+                <h2 className="text-gray-700 text-sm font-semibold leading-snug dark:text-slate-300 dark:bg-gray-800">
                   Jaime André
                 </h2>
-                <h6 className="text-black/20 text-xs font-normal leading-4">
+                <h6 className="text-black/20 text-xs font-normal leading-4 dark:text-slate-300 dark:bg-gray-800">
                   jaime@hamais.com
                 </h6>
               </div>
@@ -81,7 +66,7 @@ export default function Sidebar() {
         </div>
       </div>
       <div className="w-full">
-        <div className="w-full h-8 px-3 items-center flex">
+        <div className="w-full h-2 px-3 items-center flex">
           <h6 className="text-gray-500 text-xs font-semibold leading-4">
             MENU
           </h6>
@@ -89,12 +74,12 @@ export default function Sidebar() {
         <ul className="flex-col gap-1 flex">
           <li>
             <Link href="/dashboard">
-              <div className="p-3 rounded-lg items-center inline-flex">
-                <div className="h-5 items-center gap-3 flex">
+              <div className="p-3 rounded-lg items-center inline-flex ">
+                <div className="h-3 items-center gap-3 flex ">
                   <div className="relative">
                     <LayoutDashboard className="text-gray-500" />
                   </div>
-                  <h2 className="text-gray-500 text-sm font-medium leading-snug">
+                  <h2 className="text-gray-500 text-sm font-normal leading-snug">
                     Dashboard
                   </h2>
                 </div>
@@ -107,7 +92,12 @@ export default function Sidebar() {
             return (
               <li key={i}>
                 <Link href={item.href}>
-                  <div className="flex-col flex p-3 bg-white rounded-lg">
+                  <div className={
+                    pathName === item.href?
+                    
+                    "flex-col flex p-3 bg-white  dark:text-slate-300 dark:bg-slate-800 border-l-4 border-blue-600 text-blue-600 bg-blue-100"
+                  : "flex-col flex p-3 bg-white  dark:text-slate-300 dark:bg-slate-800 "
+                  }>
                     <div className="h-5 gap-3 flex">
                       <div className="relative">
                         <Icon className="text-gray-500" />

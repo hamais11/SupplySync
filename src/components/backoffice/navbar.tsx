@@ -3,8 +3,8 @@ import TeamSwitcherBtn from "./TeamSwitcher";
 
 export default function Navbar() {
   return (
-    <header className="antialiased ml-2">
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <header className="antialiased ml-2 ">
+      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 ">
         <div className="flex flex-wrap justify-between items-center">
           <div className="flex justify-start items-center">
             <form action="#" method="GET" className="hidden lg:block lg:pl-2">
