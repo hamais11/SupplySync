@@ -4,8 +4,8 @@ import { NextResponse } from "next/server";
 export async function POST(request:any) {
     try {
 
-        const { nomecliente, cidade, contribuinte, email, endereco,fax, ivacativoid, pais, site, telefone,tipoclienteid} = await request.json();
-        const newClient = { nomecliente, cidade, contribuinte, email, endereco,fax, ivacativoid, pais, site, telefone,tipoclienteid}
+        const { nomecliente, cidade, contribuinte, email, endereco,fax, ivacativoid, pais, site, telefone,tipoclienteid,imageUrl} = await request.json();
+        const newClient = { nomecliente, cidade, contribuinte, email, endereco,fax, ivacativoid, pais, site, telefone,tipoclienteid,imageUrl}
         console.log(newClient)
         return NextResponse.json(newClient)
         

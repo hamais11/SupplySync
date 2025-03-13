@@ -3,12 +3,12 @@ import { UploadThingError } from "uploadthing/server";
 
 const f = createUploadthing();
 
-const auth = (req: Request) => ({ id: "user1" }); // Fake auth function
+const auth = (req: Request) => ({ id: "Jaime André" }); // Fake auth function
 
 // FileRouter for your app, can contain multiple FileRoutes
 export const ourFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
-  categoryUploader: f({
+  clientImage: f({
     image: {
       /**
        * For full list of options and defaults, see the File Route API reference

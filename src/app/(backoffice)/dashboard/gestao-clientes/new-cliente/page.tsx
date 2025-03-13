@@ -9,7 +9,12 @@ import { makePostRequest } from "@/lib/apiresquest";
 import { da } from "@faker-js/faker";
 import React, { useState } from "react";
 import { set, useForm } from "react-hook-form";
-import { tipoCliente, ivaCativo, paisesDoMundo,provinciasDeAngola } from "@/utils/data";
+import {
+  tipoCliente,
+  ivaCativo,
+  paisesDoMundo,
+  provinciasDeAngola,
+} from "@/utils/data";
 
 export default function NewCategory() {
   const {
@@ -44,7 +49,7 @@ export default function NewCategory() {
      */
     }
     setLoading(true);
-
+    data.imageurl = imageUrl
     console.log(data);
 
     makePostRequest(setLoading, "api/clients", data, "Cliente", reset);
@@ -91,14 +96,13 @@ export default function NewCategory() {
             multiple={false}
           />
           <SelectInput
-          label="Cidade"
-          name="cidade"
-          register={register}
-          errors={errors}
-          className="w-full"
-          options={provinciasDeAngola}
-          multiple={false}
-          
+            label="Cidade"
+            name="cidade"
+            register={register}
+            errors={errors}
+            className="w-full"
+            options={provinciasDeAngola}
+            multiple={false}
           />
           <TextInput
             label="Nome do cliente"
@@ -125,7 +129,7 @@ export default function NewCategory() {
             name="site"
             register={register}
             errors={errors}
-             className="w-full"
+            className="w-full"
           />
           <TextInput
             label="Email"
@@ -133,24 +137,29 @@ export default function NewCategory() {
             register={register}
             errors={errors}
             type="email"
-             className="w-full"
+            className="w-full"
           />
           <TextInput
             label="Telefone"
             name="telefone"
             register={register}
             errors={errors}
-             className="w-full"
+            className="w-full"
           />
           <TextInput
             label="Fax"
             name="fax"
             register={register}
             errors={errors}
-             className="w-full"
+            className="w-full"
           />
 
-          
+          <ImageInput
+            label="Logo do Cliente"
+            imageUrl={imageUrl}
+            setImageUrl={setImageUrl}
+            endpoint="clientImage"
+          />
         </div>
 
         <SubmitButton

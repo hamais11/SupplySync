@@ -1,4 +1,7 @@
-module.exports = {
+import { withUt } from "uploadthing/tw";
+
+export default withUt({
+
   darkMode: "class",
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,4 +11,4 @@ module.exports = {
     extend: {},
   },
   plugins: [require("tailwindcss-animate")], // Teste apenas este
-};
+ })

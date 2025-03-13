@@ -4,7 +4,9 @@ import "./globals.scss";
 import LogoHome from "@/img/logoHome.png";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "react-hot-toast";
-
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { extractRouterConfig } from "uploadthing/server";
+import { ourFileRouter } from "@/app/api/uploadthing/core"
 
 export const metadata: Metadata = {
   title: "SupplySync",
@@ -26,6 +28,7 @@ export default function RootLayout({
       <body
         className={inter.className}>
          <ThemeProvider attribute="class">
+         <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
          <Toaster position="top-center" reverseOrder={false} />
          {children}
          </ThemeProvider>
