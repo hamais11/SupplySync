@@ -1,4 +1,20 @@
 import React from "react";
+import { FieldErrors, FieldValues } from "react-hook-form";
+
+type Option = {
+  id: string | number;
+  title: string;
+};
+
+type SelectInputProps = {
+  label: string;
+  name: string;
+  register: (name: string) => any; // Se estiver usando React Hook Form, pode melhorar a tipagem depois
+  className?: string;
+  options: Option[];
+  multiple?: boolean;
+  errors?: FieldErrors<FieldValues>;
+};
 
 export default function SelectInput({
   label,
@@ -7,7 +23,7 @@ export default function SelectInput({
   className = "sm:col-span-2",
   options = [],
   multiple=false
-}:any) {
+}: SelectInputProps) {
   return (
     <div className={className}>
       <label

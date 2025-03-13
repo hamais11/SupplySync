@@ -3,6 +3,8 @@ import { Pencil } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import toast from "react-hot-toast";
+import { OurFileRouter } from "@/app/api/uploadthing/core"
+
 
 export default function ImageInput({
   label,
@@ -39,8 +41,8 @@ export default function ImageInput({
           height={667}
           className="w-full h-64 object-contain"
         />
-      ) : (
-        <UploadDropzone  
+      ) : ( 
+        <UploadDropzone<OurFileRouter , typeof endpoint>
           endpoint={endpoint}
           onClientUploadComplete={(res) => {
             setImageUrl(res[0].url);
